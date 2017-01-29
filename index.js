@@ -30,16 +30,13 @@ const VendFetch = function (options) {
 
      // })
   })
-
-
 }
-//{ min: 1189682288, max: 2629108979 }
 
 VendFetch.prototype.fetch = function (config) {
 
   let queue = _.map(helpers, (helper) => {
       return new helper(config).list.then( records => {
-        return this.db.use(helper).post(records.data || records).then((response) => {
+        return this.db.use(helper).post(records).then((response) => {
           console.log(`${response.length} ${helper.name} inserted`)
         })
       })
