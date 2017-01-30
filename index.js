@@ -37,7 +37,7 @@ VendFetch.prototype.fetch = function (config) {
   let queue = _.map(helpers, (helper) => {
       return new helper(config).list.then( records => {
         return this.db.use(helper).post(records).then((response) => {
-          console.log(`${response.length} ${helper.name} inserted`)
+          console.log(`${response.results.length} ${helper.name} inserted`)
         })
       })
   })
