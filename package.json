@@ -24,7 +24,7 @@
     "node-fetch": "^1.6.3",
     "path": "^0.12.7",
     "querystring": "^0.2.0",
-    "reasondb-wrapper": "github:mingard/reasondb-wrapper",
+    "reasondb-wrapper": "^0.1.0",
     "underscore": "^1.8.3",
     "underscore.string": "^3.3.4"
   }
